@@ -6,7 +6,10 @@ const initialState: AuthState = {
   isSignedIn: false,
 };
 
-export function auth (state = initialState, action: AuthAction): AuthState {
+export default function auth (
+  state = initialState,
+  action: AuthAction
+): AuthState {
   switch (action.type) {
     case '@auth/SIGN_IN_REQUEST':
       // tudo que é retornado pelo reducer fica salvo na store
