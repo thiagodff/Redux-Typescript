@@ -9,7 +9,7 @@ import logo from "../../assets/logo.png";
 import "./index.css";
 
 const SignIn: React.FC = () => {
-  const { loadingSignInRequest } = useSelector(
+  const { loadingSignInRequest, isSignedIn, error, token } = useSelector(
     (state: StoreState) => state.auth
   );
   const dispatch = useDispatch();
@@ -32,6 +32,16 @@ const SignIn: React.FC = () => {
       <button onClick={handleSignIn}>
         {loadingSignInRequest ? "Carregando..." : "Entrar"}
       </button>
+
+      <p style={{ color: "white", marginTop: "14px" }}>
+        {isSignedIn
+          ? "Bem vindo de volta, Thiago, autenticado por " + token
+          : ""}
+      </p>
+
+      <p style={{ color: "white", marginTop: "14px" }}>
+        {error ? "Email ou senha incorreto" : ""}
+      </p>
     </div>
   );
 };
