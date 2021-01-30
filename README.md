@@ -27,10 +27,10 @@ Podemos tipar nossas actions utilizando o AnyAction do redux. <br>
 Porém essa abordagem não nos oferece uma intellisense interessante e tipar cada action
 pode ser custoso.
 
-Um lib que ajuda bastante nesse quisto é a type-safe-actions:
+Um lib que ajuda bastante nesse quisto é a typesafe-actions:
 
 ```sh
-yarn add typesafe-actions -D
+yarn add typesafe-actions
 ```
 
 ## Saga
