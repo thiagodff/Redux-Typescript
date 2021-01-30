@@ -9,7 +9,7 @@ const SignIn: React.FC = () => {
       <img src={logo} alt="CL Logo" />
       <input type="text" defaultValue="test@email.com" />
       <input type="password" defaultValue="12345678" />
-      <button>Entrar</button>
+      <button onClick={() => {}}>Entrar</button>
     </div>
   );
 };
